@@ -145,6 +145,11 @@ case "$1" in
 	echo DEVICE=flo >> .tmp-config &&
 	repo_sync $1
 	;;
+	
+"galaxy-sl")
+        echo DEVICE=galaxy-sl >> .tmp-config &&
+        repo_sync $1
+        ;;
 
 *)
 	echo "Usage: $0 [-cdflnq] (device name)"
@@ -173,6 +178,7 @@ case "$1" in
 	echo - emulator-jb
 	echo - emulator-x86
 	echo - emulator-x86-jb
+	echo - galaxy-sl
 	exit -1
 	;;
 esac
